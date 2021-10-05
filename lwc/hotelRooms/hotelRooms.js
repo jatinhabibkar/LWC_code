@@ -12,9 +12,10 @@ export default class HotelRooms extends LightningElement {
             {roomName:'A-103',capacity:2},
             {roomName:'A-104',capacity:5},
         ]
+        this.template.addEventListener('tileclick',this.onTileClickHandler)
     }
 
-    onTileClickHandler(evt){
+    onTileClickHandler=(evt)=>{
         console.log('title clicked !');
         console.log(evt.detail);
         this.selectedHotelRoom = evt.detail
