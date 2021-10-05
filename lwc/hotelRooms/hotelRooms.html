@@ -1,0 +1,24 @@
+<template>
+    <lightning-card>
+    <lightning-layout>
+        <lightning-layout-item size="12" padding="around-small">
+            <ul>
+                <template for:each={hotelRoomsInfo} for:item="room">
+                    <li key={room}>
+                        <!-- <c-hotel-room hotel-room-info={room} show-room-info> </c-hotel-room> -->
+                        <c-hotel-room show-room-info >
+                            <lightning-tile label={room.roomName} slot="roomInfo">
+                                <p class="slds-truncate">
+                                    Room Name :{room.roomName}
+                                    Room capacity : {room.capacity}
+                                </p>
+                            </lightning-tile>
+                            <div>Additional Markup</div>
+                        </c-hotel-room>
+                    </li>
+                </template>
+            </ul>
+        </lightning-layout-item>
+    </lightning-layout>
+    </lightning-card>
+</template>

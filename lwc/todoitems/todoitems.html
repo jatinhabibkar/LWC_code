@@ -1,0 +1,11 @@
+<template>
+    <h1>Todo items</h1>
+    <ul style="background-color: white; color: brown;">
+        <template for:each={todos} for:item='todo'>
+            <li key={todo}>
+                <!-- sending show-todo="true" to child component -->
+                <c-todoitem item-name={todo} show-todo ></c-todoitem>
+            </li>
+        </template>
+    </ul>
+</template>
