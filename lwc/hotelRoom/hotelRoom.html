@@ -1,14 +1,14 @@
 <template>
     <template if:true={showRoomInfo}>
         <div class="slds">
-            <!-- <lightning-tile lable={hotelRoomInfo.roomName}>
-                <p class="slds-truncate">
+            <lightning-tile lable={hotelRoomInfo.roomName}>
+                <p class="slds-truncate" onclick={tileClickHandler}>
                     Room Name :{hotelRoomInfo.roomName}
                     Room capacity : {hotelRoomInfo.capacity}
                 </p>
-            </lightning-tile> -->
+            </lightning-tile>
 
-            <slot name='roomInfo'></slot>
+            <!-- <slot name='roomInfo'></slot> -->
         </div>
     </template>
 </template>

@@ -9,4 +9,11 @@ export default class HotelRoom extends LightningElement {
     @api
     showRoomInfo=false
 
+    tileClickHandler(){
+        // create and raise components 
+
+        const tileclickEvent = new CustomEvent('tileclick',{detail:this.hotelRoomInfo,bubbles:true})
+
+        this.dispatchEvent(tileclickEvent)
+    }
 }

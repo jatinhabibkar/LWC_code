@@ -5,8 +5,11 @@
             <ul>
                 <template for:each={hotelRoomsInfo} for:item="room">
                     <li key={room}>
-                        <!-- <c-hotel-room hotel-room-info={room} show-room-info> </c-hotel-room> -->
-                        <c-hotel-room show-room-info >
+                        <c-hotel-room 
+                        hotel-room-info={room} 
+                        show-room-info
+                        ontileclick={onTileClickHandler} > </c-hotel-room>
+                        <!-- <c-hotel-room show-room-info >
                             <lightning-tile label={room.roomName} slot="roomInfo">
                                 <p class="slds-truncate">
                                     Room Name :{room.roomName}
@@ -14,11 +17,17 @@
                                 </p>
                             </lightning-tile>
                             <div>Additional Markup</div>
-                        </c-hotel-room>
+                        </c-hotel-room> -->
                     </li>
                 </template>
             </ul>
         </lightning-layout-item>
+        <lightning-layout-item size="6" padding="around-small">
+            <h3>selected room details</h3>
+            <h2>room no : {selectedHotelRoom.roomName}</h2>
+            <h2>room no : {selectedHotelRoom.capacity}</h2>
+        </lightning-layout-item>
+
     </lightning-layout>
     </lightning-card>
 </template>
