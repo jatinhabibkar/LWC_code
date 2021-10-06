@@ -10,7 +10,6 @@ export default class LifecycleDemo extends LightningElement {
     changeHandler(evt){
         this.simpleText = evt.target.value
     }
-
     connectedCallback(){
         // DOM Inserted but not yet rendered
         // can change the attribute values but cannot manipulate the DOM
@@ -24,6 +23,8 @@ export default class LifecycleDemo extends LightningElement {
     }
 
     disconnectedCallback(){
-        console.log('Disconnected callback invoked!');
+        console.log('Disconnected callback invoked!')
     }
+
 }
+

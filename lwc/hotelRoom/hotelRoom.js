@@ -1,4 +1,7 @@
-import { api, LightningElement } from 'lwc';
+import { wire,api, LightningElement } from 'lwc';
+import { fireEvent } from 'c/pubsub';
+import { CurrentPageReference } from 'lightning/navigation';
+
 
 export default class HotelRoom extends LightningElement {
 
@@ -9,11 +12,15 @@ export default class HotelRoom extends LightningElement {
     @api
     showRoomInfo=false
 
+    @wire(CurrentPageReference) pageReference;
+
     tileClickHandler(){
         // create and raise components 
 
         const tileclickEvent = new CustomEvent('tileclick',{detail:this.hotelRoomInfo,bubbles:true})
+        fireEvent(this.pageReference,'pubsubtileclick',this.hotelRoomInfo)
 
         this.dispatchEvent(tileclickEvent)
+
     }
 }
