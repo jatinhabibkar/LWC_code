@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Account manager via forms">
+        <lightning-layout>
+            <lightning-layout-item>
+                <lightning-record-edit-form object-api-name="Account" onsuccess={successHandler}>
+                    <lightning-input-field field-name="Name"></lightning-input-field>
+                    <lightning-input-field field-name="Phone"></lightning-input-field>
+                    <lightning-input-field field-name="website"></lightning-input-field>
+                    <lightning-button type="submit" label="create account" variant="brand" name="save"></lightning-button>
+
+                </lightning-record-edit-form>
+            </lightning-layout-item>
+        </lightning-layout>
+
+
+
+    </lightning-card>
+</template>
