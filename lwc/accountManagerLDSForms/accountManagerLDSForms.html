@@ -5,10 +5,18 @@
                 <lightning-record-edit-form object-api-name="Account" onsuccess={successHandler}>
                     <lightning-input-field field-name="Name"></lightning-input-field>
                     <lightning-input-field field-name="Phone"></lightning-input-field>
-                    <lightning-input-field field-name="website"></lightning-input-field>
+                    <lightning-input-field field-name="Website"></lightning-input-field>
                     <lightning-button type="submit" label="create account" variant="brand" name="save"></lightning-button>
-
                 </lightning-record-edit-form>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-record-view-form object-api-name="Account" record-id={recordId}>
+                    <div>
+                        <lightning-output-field field-name="Name"></lightning-output-field>
+                        <lightning-output-field field-name="Phone"></lightning-output-field>
+                        <lightning-output-field field-name="Website"></lightning-output-field>
+                    </div>
+                </lightning-record-view-form>
             </lightning-layout-item>
         </lightning-layout>
 
