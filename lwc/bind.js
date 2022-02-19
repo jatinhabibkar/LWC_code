@@ -38,6 +38,8 @@ function Person(){
     },100)
 }
 
+
+// patch 1
 var p1 =new Person()
 
 console.log(p1.age);
